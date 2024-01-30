@@ -6,13 +6,13 @@ from scipy.stats import norm
 @author ZhangChi
 @date 2024/01/30
 CMSC 5718 Assignment 1 Question1
-Using Order Number 9, stock code 3968, stock name China Merchants Bank, S = 27.20, volatility = 37.2%
+Using Order Number 5, stock code 700, stock name Tencent, S = 293.60, volatility = 31.8%
 It may take about few seconds to calculate answer
 """
 
 
-S, K = 27.20, 27.20
-Volatility = 0.372
+S, K = 293.60, 293.60
+Volatility = 0.318
 
 T = 0.75
 r = 0.523
