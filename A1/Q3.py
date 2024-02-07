@@ -94,7 +94,7 @@ def calculate_better_profit_x():
 
 
 if __name__ == '__main__':
-    fair_price = calculate_monte_carlo_shark_fin(F, 1 - 0.140625, 1 + 0.140625)
+    fair_price = calculate_monte_carlo_shark_fin(F, LB, UB)
     print("calculate fair price shark fin using monte carlo " + str(fair_price))
     print("inital profit " + str(NOM - fair_price))
     print("change F to: " + str(calculate_better_profit_f()))
