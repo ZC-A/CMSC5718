@@ -21,7 +21,7 @@ N, delta_t = 150, 1 / 200
 Path_1, Path_2 = 10000, 300000
 
 
-def calculate_european_call_option():
+def calculate_black_scholes():
     d1 = (np.log(S / K) + (r + Volatility ** 2 / 2) * T) / Volatility * math.sqrt(T)
     d2 = d1 - Volatility * math.sqrt(T)
     european_call_option = S * norm.cdf(d1) - K * np.exp(-r * T) * norm.cdf(d2)
@@ -50,6 +50,6 @@ def calculate_monte_carlo():
 
 
 if __name__ == '__main__':
-    print("European call option:" + str(calculate_european_call_option()))
+    print("European call option:" + str(calculate_black_scholes()))
     monte_carlo_10000, monte_carlo_300000 = calculate_monte_carlo()
     print("Monte Carlo with 10000 paths: " + str(monte_carlo_10000) + ", with 300000 paths: " + str(monte_carlo_300000))
