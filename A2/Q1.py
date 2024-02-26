@@ -1,3 +1,10 @@
+"""
+@author ZhangChi
+@date 2024/02/26
+CMSC 5718 Assignment 2 Question1
+Using Order Number 5, stock code 11, read the xlsx file
+"""
+
 import pandas as pd
 import math
 import numpy as np
