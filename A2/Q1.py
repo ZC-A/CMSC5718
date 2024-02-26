@@ -54,5 +54,5 @@ if __name__ == '__main__':
     realized_volatility_call, realized_volatility_put = black_sholes(realized_volatility, data[0], data[0], T, r)
     implied_volatility_call, implied_volatility_put = black_sholes(implied_volatility, data[0], data[0], T, r)
 
-    print('realized volatility call and realized volatility put: ' + str(realized_volatility_call) + ' ' + str(realized_volatility_put))
-    print('implied volatility call and implied volatility put: ' + str(implied_volatility_call) + ' ' + str(implied_volatility_put))
+    print('realized volatility call and realized volatility put: ' + str(realized_volatility_call + realized_volatility_call))
+    print('implied volatility call and implied volatility put: ' + str(implied_volatility_call + implied_volatility_put))
