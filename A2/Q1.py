@@ -10,7 +10,7 @@ import math
 import numpy as np
 from scipy.stats import norm
 
-data_path = 'CMSC 5718 Assignment 2 stock data.xlsx'
+data_path = 'CMSC 5718 Assignment 2 stock data (revised).xlsx'
 
 df = pd.read_excel(data_path, sheet_name='data for hedging exercise')
 data = list(df.iloc[3:, 9])   # pick the target column from xlsx file
@@ -38,9 +38,9 @@ def calculate_volatility():
 
 
 def black_sholes(volatility, s_0, k, t, r):
-    d1 = (np.log(s_0 / k) + (r + volatility ** 2 / 2) * T) / volatility * math.sqrt(t)
+    d1 = (np.log(s_0 / k) + (r + volatility ** 2 / 2) * t) / volatility * math.sqrt(t)
     d2 = d1 - volatility * math.sqrt(t)
-    european_call_option = s_0 * norm.cdf(d1) - k * np.exp(-r * T) * norm.cdf(d2)
+    european_call_option = s_0 * norm.cdf(d1) - k * np.exp(-r * t) * norm.cdf(d2)
 
     european_put_option = k * np.exp(-r * t) * norm.cdf(-d2) - s_0 * norm.cdf(-d1)
 
