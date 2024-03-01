@@ -38,7 +38,7 @@ def calculate_volatility():
 
 
 def black_sholes(volatility, s_0, k, t, r):
-    d1 = (np.log(s_0 / k) + (r + volatility ** 2 / 2) * t) / volatility * math.sqrt(t)
+    d1 = (np.log(s_0 / k) + (r + volatility ** 2 / 2) * t) / (volatility * math.sqrt(t))
     d2 = d1 - volatility * math.sqrt(t)
     european_call_option = s_0 * norm.cdf(d1) - k * np.exp(-r * t) * norm.cdf(d2)
 
